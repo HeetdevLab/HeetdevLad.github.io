@@ -89,6 +89,25 @@ h1{
   left:0;
   z-index:-1;
   }
+  .glow-card{
+  position:relative;
+  transition:0.3s;
+}
+
+.glow-card:hover{
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 0 30px rgba(0,102,255,0.8);
+}
+
+.pulse{
+  animation:pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow{
+  0%{box-shadow:0 0 10px rgba(0,102,255,0.5);}
+  50%{box-shadow:0 0 25px rgba(0,102,255,1);}
+  100%{box-shadow:0 0 10px rgba(0,102,255,0.5);}
+}
 </style>
 </head>
 
@@ -107,8 +126,9 @@ h1{
 <div class="section">
 <h2>🔥 Featured App</h2>
 
-<div class="card">
-<h3>Sentinex Secure</h3>
+<div class="card glow-card pulse">
+<img src="icon.png" width="80">
+<h3>🛡️ Sentinex Secure</h3>
 <p class="small">Smart App Protection Experience</p>
 <br>
 <a class="btn" href="/Sentinex/">Launch App</a>
