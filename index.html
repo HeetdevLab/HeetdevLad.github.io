@@ -23,7 +23,7 @@ body{
 }
 
 .container{
-  padding:70px 20px;
+  padding:110px 20px;
 }
 
 h1{
@@ -108,11 +108,38 @@ h1{
   50%{box-shadow:0 0 25px rgba(0,102,255,1);}
   100%{box-shadow:0 0 10px rgba(0,102,255,0.5);}
 }
+  .navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  padding:14px 20px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  z-index:10;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.navbar a:hover{
+  color:#0b5cff;
+}
 </style>
 </head>
 
 <body>
-
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="/Sentinex/">Sentinex</a>
+  <a href="https://youtube.com/@heetplayscode?si=JXHQ0vvoJ7Ws_qxm" target="_blank">YouTube</a>
+</div>
 <div class="container">
 
 <h1>HeetDevLab 🚀</h1>
