@@ -3,22 +3,14 @@
   z-index:-1;
 }
 /* MOVING BLUE GLOW BACKGROUND */
-body::after{
-  content:"";
-  position:fixed;
-  top:0;
-  left:-50%;
-  width:200%;
-  height:100%;
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(11,92,255,0.25),
-    transparent
-  );
-  filter:blur(80px);
-  animation:blueMove 12s linear infinite;
-  z-index:-2;
+body{
+margin:0;
+font-family:Arial,sans-serif;
+color:white;
+text-align:center;
+background:linear-gradient(270deg,#020024,#090979,#000000);
+background-size:600% 600%;
+animation:bgmove 12s ease infinite;
 }
 
 @keyframes blueMove{
