@@ -124,7 +124,22 @@ box-shadow:0 0 35px rgba(11,92,255,0.8);
 }
 
 .small{color:#cfcfcf;}
+/* Download Button Pulse Glow */
+@keyframes pulseGlow{
+0%{
+box-shadow:0 0 15px rgba(11,92,255,0.5);
+}
+50%{
+box-shadow:0 0 30px rgba(11,92,255,1);
+}
+100%{
+box-shadow:0 0 15px rgba(11,92,255,0.5);
+}
+}
 
+.download-btn.pulse{
+animation:pulseGlow 2.5s infinite;
+}
 /* PARTICLES BACKGROUND */
 #particles-js{
 position:fixed;
