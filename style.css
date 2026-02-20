@@ -93,7 +93,12 @@ background:#ff0033;
 margin-top:80px;
 text-align:center;
 }
-
+/* Click Effect */
+.card:active{
+transform:scale(0.98);
+box-shadow:0 0 70px rgba(11,92,255,1);
+transition:0.1s;
+}
 .card{
 background:rgba(255,255,255,0.06);
 padding:28px 24px;
