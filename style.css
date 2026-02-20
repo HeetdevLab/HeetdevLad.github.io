@@ -2,22 +2,29 @@
   position:fixed;
   z-index:-1;
 }
-body{
-margin:0;
-font-family:Arial,sans-serif;
-color:white;
-text-align:center;
-background:linear-gradient(270deg,#020024,#090979,#000000);
-background-size:600% 600%;
-animation:bgmove 12s ease infinite;
+/* MOVING BLUE GLOW BACKGROUND */
+body::after{
+  content:"";
+  position:fixed;
+  top:0;
+  left:-50%;
+  width:200%;
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(11,92,255,0.25),
+    transparent
+  );
+  filter:blur(80px);
+  animation:blueMove 12s linear infinite;
+  z-index:-2;
 }
 
-@keyframes glowMove{
-  0%{ transform:translate(0,0);}
-  50%{ transform:translate(10%,10%);}
-  100%{ transform:translate(0,0);}
+@keyframes blueMove{
+  0%{ transform:translateX(0); }
+  100%{ transform:translateX(50%); }
 }
-
 /* NAVBAR */
 .navbar{
 position:sticky;
