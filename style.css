@@ -3,7 +3,8 @@
 body{
 margin:0;
 font-family:Arial,sans-serif;
-color:blue;
+color:white;
+bgcolor:blue;
 text-align:center;
 background:linear-gradient(270deg,#020024,#090979,#000000);
 background-size:600% 600%;
