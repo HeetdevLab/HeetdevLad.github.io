@@ -99,6 +99,16 @@ transform:scale(0.98);
 box-shadow:0 0 70px rgba(11,92,255,1);
 transition:0.1s;
 }
+/* Glow Animation */
+@keyframes clickGlow{
+0%{box-shadow:0 0 35px rgba(11,92,255,0.4);}
+50%{box-shadow:0 0 70px rgba(11,92,255,1);}
+100%{box-shadow:0 0 35px rgba(11,92,255,0.4);}
+}
+
+.card.clicked{
+animation:clickGlow 0.4s ease;
+}
 .card{
 background:rgba(255,255,255,0.06);
 padding:28px 24px;
