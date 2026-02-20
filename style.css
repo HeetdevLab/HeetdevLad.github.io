@@ -127,23 +127,30 @@ top:0;
 left:0;
 z-index:-1;
 }
-/* ===== SENTINEX STYLE MOVING BLUE GLOW ===== */
+/* ===== STRONG SENTINEX STYLE BLUE GLOW ===== */
+body{
+  background:#050530;
+  position:relative;
+}
+
 body::before{
   content:"";
   position:fixed;
-  top:-30%;
-  left:-70%;
-  width:240%;
-  height:160%;
-  background:radial-gradient(circle, rgba(11,92,255,0.35), transparent 60%);
-  filter:blur(140px);
-  animation:sentinexGlow 18s linear infinite;
+  top:-40%;
+  left:-80%;
+  width:260%;
+  height:200%;
+  background:radial-gradient(circle at center,
+    rgba(11,92,255,0.45),
+    transparent 60%);
+  filter:blur(160px);
+  animation:heetGlow 20s ease-in-out infinite;
   z-index:-2;
   pointer-events:none;
 }
 
-@keyframes sentinexGlow{
+@keyframes heetGlow{
   0%{ transform:translateX(0);}
-  50%{ transform:translateX(25%);}
+  50%{ transform:translateX(35%);}
   100%{ transform:translateX(0);}
 }
