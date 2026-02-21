@@ -4,25 +4,32 @@ font-family:Arial, sans-serif;
 color:white;
 text-align:center;
 overflow-x:hidden;
-background: radial-gradient(circle at 50% 20%, #0b1e6d 0%, #020631 60%);
+background:#020631;   /* radial hatao temporarily */
+position:relative;    /* IMPORTANT */
 }
 /* Moving Blue Glow */
 body::before{
 content:"";
 position:fixed;
-top:-50%;
-left:-50%;
-width:200%;
-height:200%;
-background: radial-gradient(circle, rgba(11,92,255,0.15) 0%, transparent 60%);
-animation: glowMove 12s linear infinite;
-z-index:-2;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 30% 20%, rgba(11,92,255,0.25), transparent 60%),
+radial-gradient(circle at 70% 80%, rgba(11,92,255,0.2), transparent 60%);
+animation: glowMove 10s ease-in-out infinite alternate;
+z-index:-1;   /* -2 se -1 karo */
+pointer-events:none;
 }
 
 @keyframes glowMove{
-0%{ transform:translate(0%,0%); }
-50%{ transform:translate(10%,10%); }
-100%{ transform:translate(0%,0%); }
+0%{
+background-position:0% 0%;
+}
+100%{
+background-position:20% 20%;
+}
 }
 .hero{
 position:relative;
@@ -40,15 +47,16 @@ background:radial-gradient(circle, rgba(11,92,255,0.25), transparent 70%);
 z-index:-1;
 filter:blur(80px);
 }
+
+
 #particles-js{
 position:fixed;
 width:100%;
 height:100%;
 top:0;
 left:0;
-z-index:-1;
+z-index:-2;   /* change here */
 }
-
 .navbar{
 position:fixed;
 top:0;
