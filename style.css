@@ -24,7 +24,22 @@ z-index:-2;
 50%{ transform:translate(10%,10%); }
 100%{ transform:translate(0%,0%); }
 }
+.hero{
+position:relative;
+}
 
+.hero::after{
+content:"";
+position:absolute;
+top:-40px;
+left:50%;
+transform:translateX(-50%);
+width:400px;
+height:400px;
+background:radial-gradient(circle, rgba(11,92,255,0.25), transparent 70%);
+z-index:-1;
+filter:blur(80px);
+}
 #particles-js{
 position:fixed;
 width:100%;
