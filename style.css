@@ -180,7 +180,11 @@ margin-bottom:15px;
   padding: 80px 10%;
   text-align: center;
 }
-
+.eco-sub {
+  color: #bbbbbb;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
 .ecosystem h2 {
   font-size: 2rem;
   margin-bottom: 40px;
