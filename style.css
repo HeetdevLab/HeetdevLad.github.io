@@ -1,10 +1,28 @@
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:#020631;
 color:white;
 text-align:center;
 overflow-x:hidden;
+background: radial-gradient(circle at 50% 20%, #0b1e6d 0%, #020631 60%);
+}
+/* Moving Blue Glow */
+body::before{
+content:"";
+position:fixed;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background: radial-gradient(circle, rgba(11,92,255,0.15) 0%, transparent 60%);
+animation: glowMove 12s linear infinite;
+z-index:-2;
+}
+
+@keyframes glowMove{
+0%{ transform:translate(0%,0%); }
+50%{ transform:translate(10%,10%); }
+100%{ transform:translate(0%,0%); }
 }
 
 #particles-js{
