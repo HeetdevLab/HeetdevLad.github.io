@@ -289,10 +289,42 @@ margin-bottom:15px;
 section{
 margin-top:80px;
 }
-
-footer{
-margin-top:80px;
-padding:20px;
-color:#94a3b8;
-font-size:13px;
+.about {
+  padding: 80px 20px;
+  text-align: center;
 }
+
+.about-container {
+  max-width: 750px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #dcdcdc;
+  margin-bottom: 15px;
+}
+
+.highlight-line {
+  font-weight: 600;
+  color: #00ff88;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 10px;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top:80px;
+  padding:20px;
+  color:#94a3b8;
+}
+
+
+
