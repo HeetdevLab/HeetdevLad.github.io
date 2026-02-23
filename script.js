@@ -33,6 +33,7 @@ particlesJS("particles-js",{
 }
 }
 });
+}
 const card = document.querySelector(".card");
 
 if(card){
