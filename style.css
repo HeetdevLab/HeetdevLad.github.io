@@ -31,8 +31,33 @@ background-position:0% 0%;
 background-position:20% 20%;
 }
 }
+.hero-brand{
+  font-size:13px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#00c3ff;
+  margin-bottom:20px;
+  opacity:0.9;
+}
+
+.hero h1{
+  font-size:48px;
+  line-height:1.2;
+  margin-bottom:15px;
+}
+
 .hero{
-position:relative;
+  padding-top:170px;
+  padding-bottom:100px;
+}
+
+.subtitle{
+  margin-bottom:30px;
+  opacity:0.85;
+}
+
+.hero-social{
+  margin-top:15px;
 }
 
 .hero::after{
