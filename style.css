@@ -40,15 +40,6 @@ background-position:20% 20%;
   opacity:0.9;
 }
 
-.hero h1{
-  font-size:48px;
-  line-height:1.2;
-  margin-bottom:15px;
-}
-
-.hero{
-  padding-top:120px;
-  padding-bottom:90px;
 }
 @media (max-width:768px){
 
