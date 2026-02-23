@@ -1,3 +1,7 @@
+
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
 particlesJS("particles-js",{
 "particles":{
 "number":{"value":80},
