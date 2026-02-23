@@ -2,6 +2,12 @@
 function toggleMenu(){
   document.getElementById("navLinks").classList.toggle("active");
 }
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
 particlesJS("particles-js",{
 "particles":{
 "number":{"value":80},
