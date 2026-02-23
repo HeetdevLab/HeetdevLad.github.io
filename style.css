@@ -47,10 +47,20 @@ background-position:20% 20%;
 }
 
 .hero{
-  padding-top:170px;
-  padding-bottom:100px;
+  padding-top:120px;
+  padding-bottom:90px;
 }
+@media (max-width:768px){
 
+  .hero h1{
+    font-size:36px;
+  }
+
+  .subtitle{
+    font-size:14px;
+  }
+
+}
 .subtitle{
   margin-bottom:30px;
   opacity:0.85;
@@ -126,6 +136,20 @@ z-index:-2;   /* change here */
 
 .nav-links a:hover{
   color:#00c3ff;
+}
+@media (max-width: 768px){
+
+  .nav-container{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+  }
+
 }
 .container{
 padding:120px 20px 80px;   /* pehle 80 tha, ab 120 */
