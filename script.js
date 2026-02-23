@@ -1,12 +1,28 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks"); // FIXED
+  const navLinks = document.getElementById("navLinks");
+  const overlay = document.getElementById("navOverlay");
+  const links = navLinks.querySelectorAll("a");
 
-  if(hamburger && navLinks){
-    hamburger.addEventListener("click", function(){
-      navLinks.classList.toggle("active");
-    });
+  hamburger.addEventListener("click", function(){
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("nav-open");
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+  links.forEach(link=>{
+    link.addEventListener("click", closeMenu);
+  });
+
+  function closeMenu(){
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("nav-open");
   }
 
 });
