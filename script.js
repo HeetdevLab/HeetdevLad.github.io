@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
 });
+if (typeof particlesJS !== "undefined") {
 particlesJS("particles-js",{
 "particles":{
 "number":{"value":80},
