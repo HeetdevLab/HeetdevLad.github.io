@@ -146,20 +146,32 @@ z-index:-2;   /* change here */
 
 @media (max-width:768px){
 
+  .nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .nav-brand{
+    display:flex;
+    align-items:center;
+  }
+
   .hamburger{
     display:block;
+    font-size:26px;
   }
 
   .nav-links{
     position:absolute;
-    top:60px;
+    top:65px;
     right:0;
     width:100%;
     background:#050c2b;
     flex-direction:column;
     align-items:center;
     gap:20px;
-    padding:20px 0;
+    padding:25px 0;
     display:none;
   }
 
@@ -168,7 +180,6 @@ z-index:-2;   /* change here */
   }
 
 }
-
 .container{
 padding:120px 20px 80px;   /* pehle 80 tha, ab 120 */
 max-width:900px;
@@ -475,13 +486,13 @@ footer {
 }
 .dev-badge{
   display:inline-block;
-  padding:6px 14px;
+  padding:6px 18px;
   font-size:11px;
   letter-spacing:1px;
   border-radius:20px;
   background:rgba(255,170,0,0.15);
   border:1px solid rgba(255,170,0,0.4);
   color:#ffb347;
-  margin-bottom:15px;
   text-transform:uppercase;
+  margin:0 auto 20px auto;
 }
