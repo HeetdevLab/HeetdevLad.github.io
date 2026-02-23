@@ -275,6 +275,11 @@ margin-bottom:15px;
 .eco-btn:hover {
   background: white;
 }
+.more-projects,
+.about {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
 .more-projects {
   padding: 60px 20px;
   text-align: center;
