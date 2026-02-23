@@ -164,19 +164,30 @@ z-index:-2;   /* change here */
 
   .nav-links{
     position:absolute;
-    top:65px;
+    top:58px;   /* navbar ke just niche */
     right:0;
     width:100%;
-    background:#050c2b;
+    background:#06133a;
     flex-direction:column;
     align-items:center;
-    gap:20px;
-    padding:25px 0;
+    gap:16px;          /* pehle 20-25 tha, ab tight */
+    padding:18px 0;    /* less vertical padding */
     display:none;
+    border-top:1px solid rgba(255,255,255,0.05);
+    transform:translateY(-10px);
+    opacity:0;
+    transition:all 0.25s ease;
+  }
+
+  .nav-links a{
+    font-size:15px;
+    padding:6px 0;     /* remove extra spacing */
   }
 
   .nav-links.active{
-    display:flex;
+    transform:translateY(0);
+    opacity:1;
+  }
   }
 
 }
