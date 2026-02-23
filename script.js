@@ -1,8 +1,7 @@
-
 document.addEventListener("DOMContentLoaded", function(){
 
   const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
+  const navLinks = document.getElementById("navLinks"); // FIXED
 
   if(hamburger && navLinks){
     hamburger.addEventListener("click", function(){
