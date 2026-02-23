@@ -275,6 +275,15 @@ margin-bottom:15px;
 .eco-btn:hover {
   background: white;
 }
+.more-projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.more-projects h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
 .live-badge {
   background: #00ff88;
   color: black;
