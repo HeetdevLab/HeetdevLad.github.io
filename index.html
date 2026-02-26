@@ -159,6 +159,11 @@ Creator of Sentinex Smart App Lock.
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="script.js"></script>
-
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js")
+    .then(() => console.log("Global SW registered"));
+}
+</script>
 </body>
 </html>
