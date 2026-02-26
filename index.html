@@ -165,5 +165,60 @@ if ("serviceWorker" in navigator) {
     .then(() => console.log("Global SW registered"));
 }
 </script>
+ <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js").then(reg => {
+
+    // Detect new SW
+    reg.onupdatefound = () => {
+      const newWorker = reg.installing;
+
+      newWorker.onstatechange = () => {
+        if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+          showUpdatePopup(reg);
+        }
+      };
+    };
+  });
+}
+
+function showUpdatePopup(reg) {
+  const updateBar = document.createElement("div");
+  updateBar.innerHTML = `
+    <div style="
+      position:fixed;
+      bottom:20px;
+      left:50%;
+      transform:translateX(-50%);
+      background:#111;
+      color:#fff;
+      padding:12px 20px;
+      border-radius:12px;
+      box-shadow:0 0 20px #00bfff;
+      z-index:9999;
+      font-family:sans-serif;">
+      🚀 New version available
+      <button id="updateBtn" style="
+        margin-left:15px;
+        background:#00bfff;
+        border:none;
+        padding:6px 12px;
+        border-radius:8px;
+        cursor:pointer;">
+        Update
+      </button>
+    </div>
+  `;
+  document.body.appendChild(updateBar);
+
+  document.getElementById("updateBtn").onclick = () => {
+    reg.waiting.postMessage("SKIP_WAITING");
+  };
+
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    window.location.reload();
+  });
+}
+ </script>
 </body>
 </html>
