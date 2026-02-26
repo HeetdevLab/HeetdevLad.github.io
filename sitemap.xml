@@ -21,4 +21,19 @@
   <priority>0.7</priority>
 </url>
 
+<url>
+<loc>https://heetdevlab.github.io/Webtools/tools/password-generator.html</loc>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://heetdevlab.github.io/Webtools/tools/password-checker.html</loc>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://heetdevlab.github.io/Webtools/tools/hash-generator.html</loc>
+<priority>0.4</priority>
+</url>
+
 </urlset>
