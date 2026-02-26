@@ -1,4 +1,4 @@
-const CACHE_NAME = "heetdevlab-global-v1";
+const CACHE_NAME = "heetdevlab-global-v2";
 const OFFLINE_URL = "/Webtools/offline.html";
 
 self.addEventListener("install", event => {
@@ -33,4 +33,11 @@ self.addEventListener("fetch", event => {
       return caches.match(OFFLINE_URL);
     })
   );
+});
+
+// 🔥 Listen for skip waiting message
+self.addEventListener("message", event => {
+  if (event.data === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });
